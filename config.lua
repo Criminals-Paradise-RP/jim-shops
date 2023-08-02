@@ -67,6 +67,7 @@ Config = {
 			{ name = "drill", price = 1500, amount = 10, info = {} },
 			{ name = "syphoningkit", price = 2500, amount = 5, info = { gasamount = 0 } }, -- CDN-Fuel
 			{ name = "jerrycan", price = 750, amount = 50, info = { gasamount = 0 } }, -- CDN-Fuel
+			{ name = "bolt_cutter", price = 250, amount = 10, info = {} },
 		},
 		["gearshop"] = {
 			{ name = "diving_gear", price = 2500, amount = 10, },
