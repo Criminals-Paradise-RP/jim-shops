@@ -110,6 +110,7 @@ Config = {
 			{ name = "megaphone", price = 200, amount = 50, },
 			{ name = "camera", price = 500, amount = 50, },
 			{ name = "pug-vr", price = 1000, amount = 50, },
+			{ name = "auxcord", price = 10, amount = 50, },
 		},
 		["vending"] = {
 			{ name = "water_bottle", price = 100, amount = 25, },
@@ -159,6 +160,12 @@ Config = {
 			{ name = "weapon_mp5", price = 28000, amount = 5 },
 			{ name = "weapon_m110", price = 22000, amount = 5 },
 			{ name = "weapon_hk416", price = 25000, amount = 5 },
+		},
+		["fishing"] = {
+			{ name = "fishingrod", price = 100, amount = 100, },
+			{ name = "fishingbait", price = 1, amount = 5000, },
+			{ name = "ifishingrod", price = 1000, amount = 100, },
+			{ name = "ifishingbait", price = 10, amount = 5000, },
 		},
 	},
 }
@@ -357,6 +364,18 @@ Config.Locations = {
 		},
 		["products"] = Config.Products["coffeeplace"], -- example using coffeplace info
 		["hideblip"] = true,
+	},
+	["fishing"] = {
+		["label"] = "Boof Romano's Fish Merchant",
+		["type"] = "items",
+		["model"] = {
+			`s_m_m_migrant_01`,
+		},
+		["coords"] = { vector4(3803.69, 4440.73, 4.09, 4.39), },
+		["products"] = Config.Products["fishing"],
+		["blipsprite"] = 68,
+		["blipcolour"] = 47,
+		["hideblip"] = false,
 	},
 }
 
