@@ -9,6 +9,7 @@ Config = {
 	img = "ps-inventory/html/images/", -- Set this to your inventory
 	JimMenu = true, -- Enable this if you are using an updated qb-menu resource with icon support
 	ApGov = true, -- Add support for AP-Goverment Tax 
+	PsMDT = true, -- Add support for PS-MDT to Register weapon bought from the shop
 	Peds = true, -- Set to true if you want Shops to have Peds
 	Limit = true, -- Enable this to add Stash features, This adds limits to items and gets refilled at each restart
 	MaxSlots = 41, -- Set this to your player inventory slot count, this is default "41"
@@ -36,9 +37,20 @@ Config = {
 			{ name = "bandage", price = 100, amount = 50, },
 			{ name = "lighter", price = 2, amount = 50, },
 			{ name = "sodiumbicarbonate", price = 8, amount = 200,  },
-			{ name = "notepad", price = 5, amount = 50,  },
 			{ name = "sodiumcarbonate", price = 8, amount = 50,  },
-			{ name = "clothingbag", price = 250, amount = 50,  },
+			{ name = "clothing_bag", price = 250, amount = 50,  },
+			{ name = "blueberry_elfbar", price = 22, amount = 50,  },
+			{ name = "bubblegum_elfbar", price = 22, amount = 50,  },
+			{ name = "cheesecake_elfbar", price = 22, amount = 50,  },
+			{ name = "cherry_elfbar", price = 22, amount = 50,  },
+			{ name = "cola_elfbar", price = 22, amount = 50,  },
+			{ name = "doubleapple_elfbar", price = 22, amount = 50,  },
+			{ name = "elfbull_elfbar", price = 22, amount = 50,  },
+			{ name = "grape_elfbar", price = 22, amount = 50,  },
+			{ name = "greenapple_elfbar", price = 22, amount = 50,  },
+			{ name = "mango_elfbar", price = 22, amount = 50,  },
+			{ name = "strawberryice_elfbar", price = 22, amount = 50,  },
+			{ name = "watermelon_elfbar", price = 22, amount = 50,  },
 		},
 		["hardware"] = {
 			{ name = "lockpick", price = 200, amount = 50, info = {} },
@@ -60,8 +72,6 @@ Config = {
 			{ name = "advancedrepairkit", price = 500, amount = 50, info = {}, requiredJob = { ["mechanic"] = 0 } },
 			{ name = "plasticjerrycan", price = 20, amount = 500, info = {} },
 			{ name = "trowel", price = 1000, amount = 50, info = {} },
-			{ name = "ziptie", price = 100, amount = 25, info = {} },
-			{ name = "headbag", price = 100, amount = 25, info = {} },
 			{ name = "razorblade", price = 5, amount = 100, info = {} },
 			{ name = "ammonia", price = 20, amount = 100, info = {} },
 			{ name = "drill", price = 1500, amount = 10, info = {} },
@@ -110,16 +120,22 @@ Config = {
 			{ name = "skateboard", price = 1000, amount = 50, },
 			{ name = "megaphone", price = 200, amount = 50, },
 			{ name = "camera", price = 500, amount = 50, },
-			{ name = "pug-vr", price = 1000, amount = 50, },
+			-- { name = "pug-vr", price = 1000, amount = 50, },
 			{ name = "auxcord", price = 10, amount = 50, },
 		},
 		["vending"] = {
 			{ name = "water_bottle", price = 100, amount = 25, },
-			{ name = "kurkakola", price = 100, amount = 25, },
-			{ name = "sprunk", price = 100, amount = 25, },
-			{ name = "sprunklight", price = 100, amount = 25, },
-			{ name = "ecola", price = 100, amount = 25, },
-			{ name = "ecolalight", price = 100, amount = 25, },
+			{ name = "dppepper", price = 100, amount = 25, },
+			{ name = "sprite", price = 100, amount = 25, },
+			{ name = "7up", price = 100, amount = 25, },
+			{ name = "coke", price = 100, amount = 25, },
+			{ name = "dietdew", price = 100, amount = 25, },
+			{ name = "mountaindew", price = 100, amount = 25, },
+			{ name = "cherrycoke", price = 100, amount = 25, },
+			{ name = "fantaorange", price = 100, amount = 25, },
+			{ name = "fantagrape", price = 100, amount = 25, },
+			{ name = "awrootbeer", price = 100, amount = 25, },
+			{ name = "fantapineapple", price = 100, amount = 25, },
 			{ name = "twerks_candy", price = 100, amount = 25, },
 			{ name = "snikkel_candy", price = 100, amount = 25, },
 		},
@@ -375,7 +391,7 @@ Config.Locations = {
 		["coords"] = { vector4(3803.69, 4440.73, 4.09, 4.39), },
 		["products"] = Config.Products["fishing"],
 		["blipsprite"] = 68,
-		["blipcolour"] = 47,
+		["blipcolour"] = 0,
 		["hideblip"] = false,
 	},
 }
