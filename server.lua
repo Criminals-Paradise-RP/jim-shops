@@ -77,13 +77,28 @@ RegisterServerEvent('jim-shops:GetItem', function(amount, billtype, item, shopta
 
 		-- If its a weapon or a unique item, do this:
 		if QBCore.Shared.Items[item].type == "weapon" or QBCore.Shared.Items[item].unique then
-			if QBCore.Shared.Items[item].type == "weapon" then info = nil end
+			-- if QBCore.Shared.Items[item].type == "weapon" then info = nil end
+			if QBCore.Shared.Items[item].type == "weapon" then -- For ps-mdt
+				info = {} 
+				info.serie = tostring(QBCore.Shared.RandomInt(2) .. QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(1) .. QBCore.Shared.RandomStr(2) .. QBCore.Shared.RandomInt(3) .. QBCore.Shared.RandomStr(4))
+				info.quality = 100
+			end
 			for i = 1, amount do -- Make a loop to put items into different slots rather than full amount in 1 slot
 				if Player.Functions.AddItem(item, 1, nil, info) then
 					if tonumber(i) == tonumber(amount) then -- when its on its last loop do this
 						Player.Functions.RemoveMoney(tostring(billtype), (tonumber(price) * tonumber(amount)), 'ticket-payment')
 						TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], "add", amount)
 						TriggerClientEvent("jim-shops:SellAnim", src, {item = item, shoptable = shoptable})
+					end
+					if Config.PsMDT and QBCore.Shared.Items[item].type == "weapon" then -- For ps-mdt
+						local serial = info.serie
+						local imageurl = ("https://cfx-nui-ps-inventory/html/images/%s.png"):format(QBCore.Shared.Items[item].name)
+						local notes = os.date("%Y/%m/%d %X").." | "..'Purchased at Ammunation'
+						local owner = Player.PlayerData.charinfo.firstname .. " " .. Player.PlayerData.charinfo.lastname
+						local weapClass = 1
+						local weapModel = QBCore.Shared.Items[item].label
+						exports['ps-mdt']:CreateWeaponInfo(serial, imageurl, notes, owner, weapClass, weapModel)
+						TriggerClientEvent('QBCore:Notify', src, "Weapon has been Registered!", "success")
 					end
 				else
 					TriggerClientEvent('QBCore:Notify', src, "Can't give item!", "error") break -- stop the item giving loop
@@ -260,4 +275,5 @@ RegisterNetEvent('jim-shops:server:sellChips', function()
 end)
 
 QBCore.Functions.CreateCallback('jim-shops:server:GetStashItems', function(source, cb, stashId) cb(GetStashItems(stashId)) end)
-RegisterNetEvent('jim-shops:server:SaveStashItems', function(stashId, items) MySQL.Async.insert('INSERT INTO stashitems (stash, items) VALUES (:stash, :items) ON DUPLICATE KEY UPDATE items = :items', { ['stash'] = stashId, ['items'] = json.encode(items) }) end)
+-- RegisterNetEvent('jim-shops:server:SaveStashItems', function(stashId, items) MySQL.Async.insert('INSERT INTO stashitems (stash, items) VALUES (:stash, :items) ON DUPLICATE KEY UPDATE items = :items', { ['stash'] = stashId, ['items'] = json.encode(items) }) end)
+RegisterNetEvent('jim-shops:server:SaveStashItems', function(stashId, items) MySQL.Async.insert('INSERT INTO stashitems (stash, items) VALUES (:stash, :items) ON DUPLICATE KEY UPDATE items = :items', { ['stash'] = stashId, ['items'] = json.encode(items) }) end) -- For ps-mdt
