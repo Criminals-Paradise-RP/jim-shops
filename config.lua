@@ -441,11 +441,11 @@ if Config.BlackMarket then
 			`MP_M_Meth_01`,
 		},
 		["coords"] = {
-			vector4(499.84, 5603.06, 797.91, 178.78),
+			vector4(1052.72, 2282.5, 76.13, 115.28),
 			vector4(-2261.08, 230.4, 174.61, 320.51),
 			vector4(-1174.41, -2067.25, 14.4, 353.19),
 			vector4(1666.27, 0.43, 166.12, 75.04),
-			vector4(2805.31, 5979.46, 350.7, 190.6)
+			vector4(2805.31, 5979.46, 350.7, 190.6),
 		},
 		["products"] = Config.Products["blackmarket"],
 		["hideblip"] = true,
