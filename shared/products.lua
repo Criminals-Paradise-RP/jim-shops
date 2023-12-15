@@ -75,6 +75,8 @@ Products = {
         { name = "screwdriverset", price = 350, amount = 50, },
         { name = "binoculars", price = 50, amount = 50, },
         { name = "fitbit", price = 400, amount = 150, },
+        { name = "powerbank", price = 30, amount = 50, },
+        { name = "tablet", price = 200, amount = 50, },
     },
     ["vending"] = {
         { name = "water_bottle", price = 100, amount = 25, },
