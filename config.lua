@@ -7,13 +7,25 @@ Config = {
 		Debug = false, -- Enable to add debug boxes and message.
 		img = "ps-inventory/html/images/", -- Set this to your inventory
 
-		Notify = "qb",
-		Inv = "qb", -- Inventory system, options are qb or ox
-		Target = "ox", -- Targetting system, options are qb or ox
-		Menu = "qb", -- Input + Menu system, options are qb or ox
+		--- FRAMEWORK OPTIONS ---
+		Inv = "qb", 		-- Supports "qb"	(qb-inventory) -- leave as "qb" for ps-inventory
+							-- "ox"				(ox_inventory)
 
-		MenuExport = "qb-menu", -- If using "qb", what is your menu called, usually qb-menu, qbx-menu, jixel-menu etc
-		Callback = "ox", -- use qb-core callbacks or oxlib callbacks, parameters are qb or ox
+		Menu = "ox",        -- Supports "qb"    (qb-menu)
+							-- "ox"             (ox_lib)
+							-- "gta"            (warmenu)
+
+		Notify = "qb",     -- Supports "qb"    (qb-core)
+							-- "ox"             (ox_lib)
+							-- "gta"            (gta native)
+
+		Callback = "qb",    -- Supports "qb"    (qb-core)
+							-- "ox"             (ox_ib)
+
+		Target = "ox",      -- Supports "qb"    (qb-target)
+							-- "ox"             (ox_target)
+
+		MenuExport = "qb-menu", -- If using "qb", what is your menu called, usually "qb-menu", "qbx-menu", "jixel-menu" etc
 	},
 
 
@@ -38,6 +50,3 @@ Config = {
 		}
 	},
 }
-
-Core = exports['qb-core']:GetCoreObject()
-RegisterNetEvent('QBCore:Client:UpdateObject', function() Core = exports["qb-core"]:GetCoreObject() end)
