@@ -56,19 +56,19 @@ Products = {
     ["weapons"] = {
         { name = "weapon_knife", price = 250, amount = 250, },
         { name = "weapon_bat", price = 250, amount = 250, },
-        { name = "weapon_hatchet",price = 250, amount = 250,  requiredJob = { ["mechanic"] = 0, ["police"] = 0 } },
+        { name = "weapon_hatchet",price = 250, amount = 250, },
         { name = "weapon_pistol", price = 2500, amount = 5, requiresLicense = {"weapon"}, requiresItem = {"weaponlicense"} },
         { name = "weapon_snspistol", price = 1500, amount = 5, requiresLicense = {"weapon"}, requiresItem = {"weaponlicense"} },
         { name = "weapon_vintagepistol", price = 4000, amount = 5, requiresLicense = {"weapon", "hunting"}, requiresItem = {"weaponlicense", "huntinglicense"} },
-        --{ name = "pistol_ammo", price = 250, amount = 250,  requiresLicense = {"weapon"}, requiresItem = {"weaponlicense"} },
+        { name = "pistol_ammo", price = 250, amount = 250, },
     },
     ["coffeeplace"] = {
         { name = "coffee", price = 5, amount = 500 },
         { name = "lighter", price = 2, amount = 50 },
     },
-    ["casino"] = {
-        { name = 'casinochips', price = 1, amount = 999999 },
-    },
+    -- ["casino"] = {
+    --     { name = 'casinochips', price = 1, amount = 999999 },
+    -- },
     ["electronics"] = {
         { name = "phone", price = 850, amount = 50 },
         { name = "radio", price = 250, amount = 50, },
@@ -77,6 +77,13 @@ Products = {
         { name = "fitbit", price = 400, amount = 150, },
         { name = "powerbank", price = 30, amount = 50, },
         { name = "tablet", price = 200, amount = 50, },
+    },
+    ["mechshop"] = {
+        { name = "spanner", price = 75, amount = 50 },
+        { name = "adjustable_spanner", price = 95, amount = 50, },
+        { name = "pliers", price = 50, amount = 50, },
+        { name = "buzz_saw", price = 180, amount = 50, },
+        { name = "impact_driver", price = 150, amount = 50, },
     },
     ["vending"] = {
         { name = "water_bottle", price = 100, amount = 25, },
