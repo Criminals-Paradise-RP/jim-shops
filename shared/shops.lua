@@ -128,36 +128,36 @@ Locations = {
 		["blipcolour"] = 1,
     },
     -- Casino Locations
-	["casino"] = {
-		["label"] = "Diamond Casino",
-		["targetLabel"] = "Buy Chips",
-		["type"] = "items",
-		["model"] = {
-			`U_F_M_CasinoShop_01`,
-			`U_F_M_CasinoCash_01`,
-			`S_F_Y_Casino_01`,
-			`S_M_Y_Casino_01`,
-		},
-		["coords"] = {
-			vec4(990.08, 30.35, 71.47, 94.81),
-			vec4(990.96, 31.8, 71.47, 19.59),
-		},
-		["products"] = Products["casino"],
-		["hideblip"] = true,
-		["blipsprite"] = 617,
-		["blipcolour"] = 0,
-	},
-    ["casino2"] = {
-		["label"] = "Casino Bar",
-		["coords"] = { vec4(979.44, 25.4, 71.46, 0.75), },
-		["type"] = "items",
-		["model"] = {
-			`S_M_M_HighSec_01`,
-		},
-		["products"] = Products["bar"],
-		["blipsprite"] = 52,
-		["blipcolour"] = 0,
-	},
+	-- ["casino"] = {
+	-- 	["label"] = "Diamond Casino",
+	-- 	["targetLabel"] = "Buy Chips",
+	-- 	["type"] = "items",
+	-- 	["model"] = {
+	-- 		`U_F_M_CasinoShop_01`,
+	-- 		`U_F_M_CasinoCash_01`,
+	-- 		`S_F_Y_Casino_01`,
+	-- 		`S_M_Y_Casino_01`,
+	-- 	},
+	-- 	["coords"] = {
+	-- 		vec4(990.08, 30.35, 71.47, 94.81),
+	-- 		vec4(990.96, 31.8, 71.47, 19.59),
+	-- 	},
+	-- 	["products"] = Products["casino"],
+	-- 	["hideblip"] = true,
+	-- 	["blipsprite"] = 617,
+	-- 	["blipcolour"] = 0,
+	-- },
+    -- ["casino2"] = {
+	-- 	["label"] = "Casino Bar",
+	-- 	["coords"] = { vec4(979.44, 25.4, 71.46, 0.75), },
+	-- 	["type"] = "items",
+	-- 	["model"] = {
+	-- 		`S_M_M_HighSec_01`,
+	-- 	},
+	-- 	["products"] = Products["bar"],
+	-- 	["blipsprite"] = 52,
+	-- 	["blipcolour"] = 0,
+	-- },
 
     -- Weedshop Locations
     ["weedshop"] = {
@@ -276,6 +276,28 @@ Locations = {
 		},
 		["products"] = Products["coffeeplace"], -- example using coffeplace info
 		["hideblip"] = true,
+	},
+	["mechanicshop"] = {
+		["label"] = "Mechanic Shop",
+		["type"] = "items",
+		["model"] = {
+			`S_M_M_LifeInvad_01`,
+			`IG_Ramp_Hipster`,
+			`A_M_Y_Hipster_02`,
+			`A_F_Y_Hipster_01`,
+			`IG_LifeInvad_01`,
+			`IG_LifeInvad_02`,
+			`CS_LifeInvad_01`,
+		},
+		["logo"] = "https://static.wikia.nocookie.net/gtawiki/images/f/f2/GTAV-LSCustoms-Logo.png",
+		["coords"] = {
+			vec4(-360.7992, -99.0406, 39.5466, 75.4683),
+			vec4(-589.0287, -930.6052, 23.8866, 121.7041),
+			vec4(876.3502, -2100.4170, 30.4797, 184.0238),
+			},
+		["products"] = Products["mechshop"],
+		["blipsprite"] = 619,
+		["blipcolour"] = 7,
 	},
 }
 
