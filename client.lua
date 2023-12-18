@@ -87,12 +87,12 @@ CreateThread(function()
 					end,
 					},
 				}
-				if k == "casino" then
-					options[#options+1] = {
-						action = function() TriggerServerEvent("jim-shops:server:sellChips") end,
-						icon = "fab fa-galactic-republic", label = "Trade Chips ($"..Config.Overrides.SellCasinoChips.pricePer.." per chip)",
-					}
-				end
+				-- if k == "casino" then
+				-- 	options[#options+1] = {
+				-- 		action = function() TriggerServerEvent("jim-shops:server:sellChips") end,
+				-- 		icon = "fab fa-galactic-republic", label = "Trade Chips ($"..Config.Overrides.SellCasinoChips.pricePer.." per chip)",
+				-- 	}
+				-- end
 				if Config.Overrides.Peds then
 					Targets[label] = createEntityTarget(Peds[label], options, 2.0)
 				else
