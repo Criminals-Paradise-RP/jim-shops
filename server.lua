@@ -331,9 +331,9 @@ RegisterNetEvent("jim-shops:MakeStash", function()
 							if Config.Overrides.RandomAmount then
 								stashTable[i].amount = math.random(1, tonumber(v["products"][i].amount))
 							end
-							if itemInfo["name"] == Config.Overrides.SellCasinoChips.chipItem then
-								stashTable[i].amount = v["products"][i].amount
-							end
+							-- if itemInfo["name"] == Config.Overrides.SellCasinoChips.chipItem then
+							-- 	stashTable[i].amount = v["products"][i].amount
+							-- end
 						end
 					elseif Config.System.Inv == "ox" then
 						if exports.ox_inventory:Items(v["products"][i].name) then
@@ -348,8 +348,8 @@ RegisterNetEvent("jim-shops:MakeStash", function()
 								stashTable[i].info.qty = stashTable[i].amount
 								stashTable[i].amount = 1
 							end
-							if stashTable[i].name == Config.Overrides.SellCasinoChips.chipItem then stashTable[i].amount = v["products"][i].amount end
-							exports.ox_inventory:AddItem(stashname, stashTable[i].name, stashTable[i].amount, stashTable[i].info, stashTable[i].slot)
+							-- if stashTable[i].name == Config.Overrides.SellCasinoChips.chipItem then stashTable[i].amount = v["products"][i].amount end
+							-- exports.ox_inventory:AddItem(stashname, stashTable[i].name, stashTable[i].amount, stashTable[i].info, stashTable[i].slot)
 						end
 					end
 				end
@@ -522,34 +522,34 @@ elseif Config.System.Callback == "ox" then
 	lib.callback.register('jim-shops:server:GetStashItems', function(source, stashId) return GetStashItems(stashId) end)
 end
 
-RegisterNetEvent('jim-shops:server:sellChips', function()
-    local src = source
-    local Player = Core.Functions.GetPlayer(src)
-	if Config.System.Inv == "qb" then
-		if not Player.Functions.GetItemByName(Config.Overrides.SellCasinoChips.chipItem) then
-			triggerNotify(getName("casino"), "You don't have any "..Items[Config.Overrides.SellCasinoChips.chipItem].label.." to sell", src) return
-		elseif Player.Functions.GetItemByName(Config.Overrides.SellCasinoChips.chipItem) then
-			local amount = Player.Functions.GetItemByName(Config.Overrides.SellCasinoChips.chipItem).amount
-			local price = Config.Overrides.SellCasinoChips.pricePer * amount
-			if Player.Functions.RemoveItem(Config.Overrides.SellCasinoChips.chipItem, amount) then
-				TriggerClientEvent('QBCore:Notify', src, "You sold your chips for $"..price)
-				Player.Functions.AddMoney("cash", price, "sold-casino-chips")
-			end
-		end
-	elseif Config.System.Inv == "ox" then
-		local item = exports.ox_inventory:Items(Config.Overrides.SellCasinoChips.chipItem)
-		if not Player.Functions.GetItemByName(Config.Overrides.SellCasinoChips.chipItem) then
-			triggerNotify(getName("casino"), "You don't have any "..item.label.." to sell", src) return
-		elseif Player.Functions.GetItemByName(Config.Overrides.SellCasinoChips.chipItem) then
-			local amount = Player.Functions.GetItemByName(Config.Overrides.SellCasinoChips.chipItem).amount
-			local price = Config.Overrides.SellCasinoChips.pricePer * amount
-			if Player.Functions.RemoveItem(Config.Overrides.SellCasinoChips.chipItem, amount) then
-				triggerNotify(getName("casino"), "You sold your chips for $"..price, src)
-				Player.Functions.AddMoney("cash", price, "sold-casino-chips")
-			end
-		end
-    end
-end)
+-- RegisterNetEvent('jim-shops:server:sellChips', function()
+--     local src = source
+--     local Player = Core.Functions.GetPlayer(src)
+-- 	if Config.System.Inv == "qb" then
+-- 		if not Player.Functions.GetItemByName(Config.Overrides.SellCasinoChips.chipItem) then
+-- 			triggerNotify(getName("casino"), "You don't have any "..Items[Config.Overrides.SellCasinoChips.chipItem].label.." to sell", src) return
+-- 		elseif Player.Functions.GetItemByName(Config.Overrides.SellCasinoChips.chipItem) then
+-- 			local amount = Player.Functions.GetItemByName(Config.Overrides.SellCasinoChips.chipItem).amount
+-- 			local price = Config.Overrides.SellCasinoChips.pricePer * amount
+-- 			if Player.Functions.RemoveItem(Config.Overrides.SellCasinoChips.chipItem, amount) then
+-- 				TriggerClientEvent('QBCore:Notify', src, "You sold your chips for $"..price)
+-- 				Player.Functions.AddMoney("cash", price, "sold-casino-chips")
+-- 			end
+-- 		end
+-- 	elseif Config.System.Inv == "ox" then
+-- 		local item = exports.ox_inventory:Items(Config.Overrides.SellCasinoChips.chipItem)
+-- 		if not Player.Functions.GetItemByName(Config.Overrides.SellCasinoChips.chipItem) then
+-- 			triggerNotify(getName("casino"), "You don't have any "..item.label.." to sell", src) return
+-- 		elseif Player.Functions.GetItemByName(Config.Overrides.SellCasinoChips.chipItem) then
+-- 			local amount = Player.Functions.GetItemByName(Config.Overrides.SellCasinoChips.chipItem).amount
+-- 			local price = Config.Overrides.SellCasinoChips.pricePer * amount
+-- 			if Player.Functions.RemoveItem(Config.Overrides.SellCasinoChips.chipItem, amount) then
+-- 				triggerNotify(getName("casino"), "You sold your chips for $"..price, src)
+-- 				Player.Functions.AddMoney("cash", price, "sold-casino-chips")
+-- 			end
+-- 		end
+--     end
+-- end)
 
 RegisterNetEvent('jim-shops:server:SaveStashItems', function(stashId, items)
 	MySQL.Async.insert('INSERT INTO stashitems (stash, items) VALUES (:stash, :items) ON DUPLICATE KEY UPDATE items = :items', { ['stash'] = stashId, ['items'] = json.encode(items) })
