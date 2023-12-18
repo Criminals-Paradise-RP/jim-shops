@@ -42,11 +42,11 @@ Config = {
 		GabzAmmu = false, -- Enable if using gabz Ammunation stores
 		VendOverride = true, -- Enable this if you want all the vending machines to use this script
 		RandomAmount = true, -- Sets wether a stash should have a "random" amount of stock or full.
-		SellCasinoChips = {
-			coords = vector4(950.37, 34.72, 71.87, 33.82),
-			ped = 'S_M_Y_CASINO_01',
-			pricePer = 1,
-			chipItem = "casinochips",
-		}
+		-- SellCasinoChips = {
+		-- 	coords = vector4(950.37, 34.72, 71.87, 33.82),
+		-- 	ped = 'S_M_Y_CASINO_01',
+		-- 	pricePer = 1,
+		-- 	chipItem = "casinochips",
+		-- }
 	},
 }
