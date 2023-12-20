@@ -91,6 +91,7 @@ Locations = {
 			vec4(46.52, -1749.55, 29.64, 50.82),
 			vec4(2747.76, 3472.9, 55.67, 243.88),
 			vec4(-421.65, 6135.97, 31.88, 232.98),
+			vec4(1203.6327, 2647.0776, 36.8067, 45.2139),
 		},
         ["products"] = Products["hardware"],
         ["blipsprite"] = 402,
@@ -296,8 +297,98 @@ Locations = {
 			vec4(876.3502, -2100.4170, 30.4797, 184.0238),
 			},
 		["products"] = Products["mechshop"],
-		["blipsprite"] = 619,
-		["blipcolour"] = 7,
+		["blipsprite"] = 72,
+		["blipcolour"] = 47,
+	},
+	["blackmarket"] = {
+		["label"] = "Black Market",
+		["type"] = "items",
+		["model"] = {
+			`mp_f_weed_01`,
+			`MP_M_Weed_01`,
+			`A_M_Y_MethHead_01`,
+			`A_F_Y_RurMeth_01`,
+			`A_M_M_RurMeth_01`,
+			`MP_F_Meth_01`,
+			`MP_M_Meth_01`,
+		},
+		["coords"] = {
+			vec4(801.0792, -756.4954, 26.8244, 236.1940), -- old pizza this
+		},
+		["products"] = Products["blackmarket"],
+		["hideblip"] = true,
+	},
+	["blackmarket2"] = {
+		["label"] = "Black Market",
+		["type"] = "items",
+		["model"] = {
+			`mp_f_weed_01`,
+			`MP_M_Weed_01`,
+			`A_M_Y_MethHead_01`,
+			`A_F_Y_RurMeth_01`,
+			`A_M_M_RurMeth_01`,
+			`MP_F_Meth_01`,
+			`MP_M_Meth_01`,
+		},
+		["coords"] = {
+			vec4(-1170.1991, -518.1138, 36.2325, 18.4261), -- On film set
+		},
+		["products"] = Products["blackmarket2"],
+		["hideblip"] = true,
+	},
+	["blackmarket3"] = {
+		["label"] = "Black Market",
+		["type"] = "items",
+		["model"] = {
+			`mp_f_weed_01`,
+			`MP_M_Weed_01`,
+			`A_M_Y_MethHead_01`,
+			`A_F_Y_RurMeth_01`,
+			`A_M_M_RurMeth_01`,
+			`MP_F_Meth_01`,
+			`MP_M_Meth_01`,
+		},
+		["coords"] = {
+			vec4(-277.8505, 2205.2188, 130.4001, 49.8237), -- Old house 5001
+		},
+		["products"] = Products["blackmarket3"],
+		["hideblip"] = true,
+	},
+	["blackmarket4"] = {
+		["label"] = "Black Market",
+		["type"] = "items",
+		["model"] = {
+			`mp_f_weed_01`,
+			`MP_M_Weed_01`,
+			`A_M_Y_MethHead_01`,
+			`A_F_Y_RurMeth_01`,
+			`A_M_M_RurMeth_01`,
+			`MP_F_Meth_01`,
+			`MP_M_Meth_01`,
+		},
+		["coords"] = {
+			vec4(1850.0011, 4579.4390, 31.7657, 54.3707), -- under bridge 2018
+		},
+		["products"] = Products["blackmarket5"],
+		["hideblip"] = true,
+	},
+	["blackmarket5"] = {
+		["label"] = "Black Market",
+		["type"] = "items",
+		["model"] = {
+			`mp_f_weed_01`,
+			`MP_M_Weed_01`,
+			`A_M_Y_MethHead_01`,
+			`A_F_Y_RurMeth_01`,
+			`A_M_M_RurMeth_01`,
+			`MP_F_Meth_01`,
+			`MP_M_Meth_01`,
+		},
+		["coords"] = {
+			vec4(-752.8830, 5592.6709, 41.6547, 137.8777), -- lift at 1018
+		},
+		["products"] = Products["blackmarket4"],
+		["hideblip"] = true,
 	},
 }
 
@@ -332,28 +423,99 @@ if Config.Overrides.GabzAmmu then
 		vec4(-1310.71, -394.33, 36.7, 340.51),
 	}
 end
+
 if Config.Overrides.BlackMarket then
-	Locations["blackmarket"] = {
-		["label"] = "Black Market",
-		["type"] = "items",
-		["model"] = {
-			`mp_f_weed_01`,
-			`MP_M_Weed_01`,
-			`A_M_Y_MethHead_01`,
-			`A_F_Y_RurMeth_01`,
-			`A_M_M_RurMeth_01`,
-			`MP_F_Meth_01`,
-			`MP_M_Meth_01`,
+	Locations = {
+		["blackmarket"] = {
+			["label"] = "Black Market",
+			["type"] = "items",
+			["model"] = {
+				`mp_f_weed_01`,
+				`MP_M_Weed_01`,
+				`A_M_Y_MethHead_01`,
+				`A_F_Y_RurMeth_01`,
+				`A_M_M_RurMeth_01`,
+				`MP_F_Meth_01`,
+				`MP_M_Meth_01`,
+			},
+			["coords"] = {
+				vec4(801.0792, -756.4954, 26.8244, 236.1940), -- old pizza this
+			},
+			["products"] = Products["blackmarket"],
+			["hideblip"] = true,
 		},
-		["coords"] = {
-			vec4(776.24, 4184.08, 41.8, 92.12),
-			vec4(2482.51, 3722.28, 43.92, 39.98),
-			vec4(462.67, -1789.16, 28.59, 317.53),
-			vec4(-115.15, 6369.07, 31.52, 232.08),
-			vec4(752.52, -3198.33, 6.07, 301.72)
+		["blackmarket2"] = {
+			["label"] = "Black Market",
+			["type"] = "items",
+			["model"] = {
+				`mp_f_weed_01`,
+				`MP_M_Weed_01`,
+				`A_M_Y_MethHead_01`,
+				`A_F_Y_RurMeth_01`,
+				`A_M_M_RurMeth_01`,
+				`MP_F_Meth_01`,
+				`MP_M_Meth_01`,
+			},
+			["coords"] = {
+				vec4(-1170.1991, -518.1138, 36.2325, 18.4261), -- On film set
+			},
+			["products"] = Products["blackmarket2"],
+			["hideblip"] = true,
 		},
-		["products"] = Products["blackmarket"],
-		["hideblip"] = true,
+		["blackmarket3"] = {
+			["label"] = "Black Market",
+			["type"] = "items",
+			["model"] = {
+				`mp_f_weed_01`,
+				`MP_M_Weed_01`,
+				`A_M_Y_MethHead_01`,
+				`A_F_Y_RurMeth_01`,
+				`A_M_M_RurMeth_01`,
+				`MP_F_Meth_01`,
+				`MP_M_Meth_01`,
+			},
+			["coords"] = {
+				vec4(-277.8505, 2205.2188, 130.4001, 49.8237), -- Old house 5001
+			},
+			["products"] = Products["blackmarket3"],
+			["hideblip"] = true,
+		},
+		["blackmarket4"] = {
+			["label"] = "Black Market",
+			["type"] = "items",
+			["model"] = {
+				`mp_f_weed_01`,
+				`MP_M_Weed_01`,
+				`A_M_Y_MethHead_01`,
+				`A_F_Y_RurMeth_01`,
+				`A_M_M_RurMeth_01`,
+				`MP_F_Meth_01`,
+				`MP_M_Meth_01`,
+			},
+			["coords"] = {
+				vec4(1850.0011, 4579.4390, 31.7657, 54.3707), -- under bridge 2018
+			},
+			["products"] = Products["blackmarket5"],
+			["hideblip"] = true,
+		},
+		["blackmarket5"] = {
+			["label"] = "Black Market",
+			["type"] = "items",
+			["model"] = {
+				`mp_f_weed_01`,
+				`MP_M_Weed_01`,
+				`A_M_Y_MethHead_01`,
+				`A_F_Y_RurMeth_01`,
+				`A_M_M_RurMeth_01`,
+				`MP_F_Meth_01`,
+				`MP_M_Meth_01`,
+			},
+			["coords"] = {
+				vec4(-752.8830, 5592.6709, 41.6547, 137.8777), -- lift at 1018
+			},
+			["products"] = Products["blackmarket4"],
+			["hideblip"] = true,
+		},
 	}
 end
 
