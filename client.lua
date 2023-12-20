@@ -54,7 +54,7 @@ CreateThread(function()
 			for l, b in pairs(v["coords"]) do
 				local label = "Shop - ['"..k.."("..l..")']"
 				if not v["hideblip"] then
-					Blips[#Blips+1] = makeBlip({coords = b, sprite = v["blipsprite"], col = v["blipcolour"], scale = 0.7, disp = 6, category = nil, name = v["label"]})
+					Blips[#Blips+1] = makeBlip({coords = b, sprite = v["blipsprite"], col = v["blipcolour"], scale = 0.8, disp = 6, category = nil, name = v["label"]})
 				end
 				if Config.Overrides.Peds then
 					if v["model"] then
