@@ -171,10 +171,9 @@ Locations = {
 			`A_F_Y_RurMeth_01`,
 			`a_m_y_hippy_01`,
 		},
-		["coords"] = { vec4(-1173.12, -1572.71, 4.66, 123.56), },
+		["coords"] = { vec4(0, 0, 0, 0), },
 		["products"] = Products["weedshop"],
-		["blipsprite"] = 496,
-		["blipcolour"] = 2,
+		["hideblip"] = true,
 	},
 
     -- Bean Coffee Locations
