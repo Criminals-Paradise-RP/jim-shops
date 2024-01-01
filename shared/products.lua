@@ -36,8 +36,7 @@ Products = {
         { name = "weapon_bat", price = 500, amount = 50,  requiredGang = { "lostmc" } },  -- Gang only options in stores
         { name = "repairkit", price = 250, amount = 50,  requiredJob = { ["mechanic"] = 0, ["police"] = 0 } },
         { name = "screwdriverset", price = 350, amount = 50, },
-        { name = "phone", price = 850, amount = 50, },
-        { name = "radio", price = 250, amount = 50, },
+        -- { name = "trowel", price = 50, amount = 50, },
         { name = "binoculars", price = 50, amount = 50, },
         { name = "firework1", price = 50, amount = 50, },
         { name = "firework2", price = 50, amount = 50, },
@@ -186,5 +185,7 @@ Products = {
         { name = "ignition_bomb", price = 1200, amount = 25 },
         { name = "impact_bomb", price = 1200, amount = 25 },
         { name = "firelighter", price = 1200, amount = 25 },
+        -- { name = "sodiumbicarbonate", price = 8, amount = 25 },
+        -- { name = "plasticjerrycan", price = 20, amount = 25 },
     },
 }
